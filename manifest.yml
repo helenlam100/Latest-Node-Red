@@ -1,0 +1,22 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: Latest-Node-Red
+  host: Latest-Node-Red
+  disk_quota: 1024M
+  services:
+  - Language Translation-wc
+  - Text to Speech-r4
+  - Speech To Text-zi
+  - Latest-Node-Red-cloudantNoSQLDB
+  - Latest-Node-Red-iotf-service
+  - Tradeoff Analytics-m0
+  - Tone Analyzer-ya
+  - Conversation-ku
+  - Personality Insights-bo
+  - AlchemyAPI-4f
+  env:
+    classifier_id: 34175ex88-nlc-4399
+  command: node --max-old-space-size=384 node_modules/node-red/red.js --settings ./bluemix-settings.js -v
